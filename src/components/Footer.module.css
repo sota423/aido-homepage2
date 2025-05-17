@@ -1,0 +1,140 @@
+/* src/styles/Footer.module.css */
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end; /* 右寄せ */
+  padding: 32px 40px 16px 40px;
+  background: #f5f5f5; /* ヘッダーと同じ色に */
+  color: #333;
+  font-size: 13px; /* 少し小さく */
+  border-top: 1px solid #ddd;
+  position: relative;
+  min-height: 100px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  min-width: 120px;
+  margin-right: auto; /* 左側にロゴを固定 */
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.sitename {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: flex-end;
+  font-size: 1em;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333; /* ヘッダーと同じ色に */
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.footerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* 右寄せ */
+  gap: 0.4em;
+}
+
+.sns {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  align-items: center; /* 高さ揃え */
+  margin-top: 0.2em;
+}
+
+.xicon {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1;
+  display: inline-block;
+  position: relative;
+  top: 1px; /* 微調整 */
+}
+
+.igicon {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1;
+  display: inline-block;
+  position: relative;
+  top: 1px; /* 微調整 */
+}
+
+.sns a {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sns a:hover .xicon,
+.sns a:hover .igicon {
+  color: #2563eb;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 18px;
+  color: #888;
+  font-size: 11px;
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 24px 12px 12px 12px;
+    min-height: unset;
+  }
+  .footerRight {
+    align-items: flex-start;
+    width: 100%;
+  }
+  .nav {
+    justify-content: flex-start;
+    gap: 1.2rem;
+  }
+  .sns {
+    margin-top: 8px;
+  }
+  .copyright {
+    position: static;
+    margin-top: 18px;
+  }
+}

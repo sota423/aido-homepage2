@@ -1,0 +1,10 @@
+/* src/styles/Layout.module.css */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main {
+  min-height: 80vh;
+}

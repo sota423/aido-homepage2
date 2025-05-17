@@ -1,0 +1,242 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0; /* ここで余白は外す */
+  background: transparent; /* 背景を消す */
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 120vw;
+  height: 80vh;
+  background: radial-gradient(circle at 30% 30%, #fff3 0%, #fff0 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  width: 160px;
+  height: auto;
+  margin: 32px 0 24px 0;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.h2 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: #1e293b;
+  text-align: center;
+}
+
+.p {
+  font-size: 1.2rem;
+  color: #334155;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.sns {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.sns a {
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.sns a:hover {
+  background: #1e40af;
+}
+
+.catchcopy {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 64px; /* ゆとりを持たせる */
+  margin-top: 32px;    /* 上にも余白 */
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.18), 0 1px 0 #2563eb;
+  font-family: 'Montserrat', 'Segoe UI', 'Hiragino Sans', 'Meiryo', sans-serif;
+}
+
+.catchcopyEn {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: 16px;
+  color: #e0e7ff;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  font-family: 'Montserrat', 'Segoe UI', 'Hiragino Sans', 'Meiryo', sans-serif;
+}
+
+.newsSection {
+  width: 100%;
+  max-width: 700px;
+  margin: 48px auto 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 32px 24px 24px 24px;
+}
+
+.newsTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+  color: #222;
+  letter-spacing: 0.04em;
+}
+
+.newsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.newsItem {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 0;
+  transition: background 0.15s;
+}
+
+.newsLink {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  text-decoration: none;
+  color: #222;
+  font-size: 1.05rem;
+  transition: background 0.15s;
+}
+
+.newsLink:hover {
+  background: #f0f4ff;
+}
+
+.newsDate {
+  min-width: 90px;
+  color: #888;
+  font-size: 0.98em;
+}
+
+.newsType {
+  background: #333;
+  color: #fff;
+  font-size: 0.92em;
+  border-radius: 4px;
+  padding: 2px 10px;
+  margin-right: 0.7em;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.newsText {
+  flex: 1;
+}
+
+.newsMore {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.newsMoreBtn {
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  padding: 8px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  transition: background 0.2s;
+}
+
+.newsMoreBtn:hover {
+  background: #2563eb;
+}
+
+.moreLink {
+  display: block;
+  margin: 24px 0 0 auto;   /* 右寄りに */
+  font-size: 1.1rem;
+  color: #fff;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: right;
+  width: fit-content;
+  box-shadow: none;
+  position: static;
+  transition: color 0.2s;
+}
+
+.moreLink:hover {
+  color: #e0e7ff;
+  text-decoration: none;
+}
+
+.newsBg {
+  width: 100vw;
+  background: #f5f5f5;
+  padding: 64px 0 80px 0; /* 上下とも十分な余白 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  width: 100vw;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* 上下とも大きめの余白、上をさらに増やす */
+  padding: 160px 20px 50px 20px;
+  background: linear-gradient(120deg, #2563eb 0%, #a5b4fc 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 120vw;
+  height: 80vh;
+  background: radial-gradient(circle at 30% 30%, #fff3 0%, #fff0 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
